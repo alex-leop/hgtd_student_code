@@ -1,0 +1,9 @@
+
+executable              = condorExecutable.sh
+arguments               = $(ProcId)
+requirements            = (OpSysAndVer =?= "CentOS7")
+output                  = LOG/logfile$(ProcId).out
+error                   = LOG/logfile$(ProcId).out
+log                     = LOG/logfile$(ProcId).out
++JobFlavour             = "espresso"
+queue 5
